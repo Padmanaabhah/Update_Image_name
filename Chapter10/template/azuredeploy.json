@@ -165,7 +165,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "[parameters('vmSize')]"
+                    "vmSize": "[parameters('VmSize')]"
                 },
                 "storageProfile": {
                     "osDisk": {
@@ -174,12 +174,13 @@
                             "storageAccountType": "[variables('osDiskType')]"
                         }
                     },
-                    "imageReference": {
-                        "publisher": "MicrosoftVisualStudio",
-                        "offer": "visualstudio2019latest",
-                        "sku": "vs-2019-comm-latest-ws2019",
-                        "version": "latest"
+                "imageReference": {
+                      "publisher": "MicrosoftWindowsServer",
+                      "offer": "WindowsServer",
+                      "sku": "2019-Datacenter",
+                      "version": "latest"
                     }
+
                 },
                 "networkProfile": {
                     "networkInterfaces": [
